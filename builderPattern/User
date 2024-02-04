@@ -1,0 +1,119 @@
+package builderPattern;
+
+public class User {
+    protected final String firstName;
+    protected final String lastName;
+    protected final String email;
+    protected final String address;
+    protected final String phone;
+    protected final Integer age;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+
+    private User(UserBuilder builder){
+        this.firstName = builder.firstName;
+        this.lastName = builder.lastName;
+        this.email = builder.email;
+        this.address = builder.address;
+        this.phone = builder.phone;
+        this.age = builder.age;
+    }
+
+    protected static class UserBuilder{
+        private String firstName;
+        private String lastName;
+        private String email;
+        private String address;
+        private String phone;
+        private Integer age;
+
+        public UserBuilder firstName(String firstName){
+            if(firstName == null){
+                this.firstName = "";
+            }
+            else{
+                this.firstName = firstName;
+            }
+            return this;
+        }
+
+        public UserBuilder lastName(String lastName){
+            if(lastName == null){
+                this.lastName = "";
+            }
+            else{
+                this.lastName = lastName;
+            }
+            return this;
+        }
+
+        public UserBuilder email(String email){
+            if(email == null){
+                this.email = "";
+            }
+            else{
+                this.email = email;
+            }
+            return this;
+        }
+
+        public UserBuilder address(String address){
+            if(address == null){
+                this.address = "";
+            }
+            else{
+                this.address = address;
+            }
+            return this;
+        }
+
+        public UserBuilder phone(String phone){
+            if(phone == null){
+                this.phone = "";
+            }
+            else{
+                this.phone = phone;
+            }
+            return this;
+        }
+
+        public UserBuilder age(Integer age){
+            if(age == null){
+                this.age = null;
+            }
+            else{
+                this.age = age;
+            }
+            return this;
+        }
+
+        public User build() {
+            return new User(this);
+        }
+
+    }
+
+}
