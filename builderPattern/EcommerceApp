@@ -1,0 +1,64 @@
+package builderPattern;
+
+public class EcommerceApp {
+
+    public static void main (String[]args){
+
+        User Rayleen = new User.UserBuilder()
+                .firstName("Rayleen Rae")
+                .lastName("Bitoon")
+                .phone("09123456789")
+                .address("Manila City")
+                .email("rayleen.bitoon@neu.edu.ph")
+                .age(20)
+                .build();
+
+        User Gojo = new User.UserBuilder()
+                .phone("099999999")
+                .email("gojo.satoru@gmail.com")
+                .lastName("Satoru")
+                .age(35)
+                .firstName("Gojo")
+                .address("Jujutsu High")
+                .build();
+
+        User Babylene = new User.UserBuilder()
+                .firstName("Babylene")
+                .phone("09123456789")
+                .address("Manila City")
+                .age(20)
+                .build();
+
+
+        System.out.println("User's Information");
+        System.out.println();
+        System.out.println("First Name: " + Rayleen.firstName);
+        System.out.println("Last Name: " + Rayleen.lastName);
+        System.out.println("Email: " + Rayleen.email);
+        System.out.println("Address: " + Rayleen.address);
+        System.out.println("Phone: " + Rayleen.phone);
+        System.out.println("Age: " + Rayleen.age);
+
+        System.out.println();
+
+        System.out.println("User's Information");
+        System.out.println();
+        System.out.println("First Name: " + Gojo.firstName);
+        System.out.println("Last Name: " + Gojo.lastName);
+        System.out.println("Email: " + Gojo.email);
+        System.out.println("Address: " + Gojo.address);
+        System.out.println("Phone: " + Gojo.phone);
+        System.out.println("Age: " + Gojo.age);
+
+        System.out.println();
+
+        System.out.println("User's Information");
+        System.out.println();
+        System.out.println("First Name: " + Babylene.firstName);
+        System.out.println("Last Name: " + Babylene.lastName);
+        System.out.println("Email: " + Babylene.email);
+        System.out.println("Address: " + Babylene.address);
+        System.out.println("Phone: " + Babylene.phone);
+        System.out.println("Age: " + Babylene.age);
+    }
+}
