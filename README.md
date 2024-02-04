@@ -19,3 +19,5 @@ Data consistency: Changes to user profiles after registration can cause unexpect
 Implement solution using the Builder Pattern to address the issue.
 
 # Class Diagram
+
+![Blank diagram](https://github.com/Reirinn/Builder-Pattern/assets/142465054/609eb14c-0896-49ea-8a26-48d2d00476a1)
